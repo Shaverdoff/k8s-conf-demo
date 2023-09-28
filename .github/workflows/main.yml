@@ -7,9 +7,15 @@ on:
 env:
   KUBU_CONFIG: ${{ secrets.K8s }}
 jobs:
+#  poll:
+#    name: pool repo
+#    runs-on: self-hosted
+#    steps
   build:
     name: test-release
     runs-on: self-hosted
     steps:
+      - name: pull repo
+        run: git pull https://github.com/Shaverdoff/k8s-conf-demo.git
       - name: get pod
         run: kubectl apply -f manifests/deployment.yaml
