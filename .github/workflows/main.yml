@@ -1,0 +1,4 @@
+curl -sSL https://hub.mcs.mail.ru/repository/client-keystone-auth/latest/linux/client-install.sh | bash
+kubectl get pod
+
+KUBECONFIG_BASE64_NEW
