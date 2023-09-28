@@ -12,4 +12,4 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: get pod
-        run: kubectl apply -f manifests/
+        run: kubectl apply -f manifests/deployment.yaml
