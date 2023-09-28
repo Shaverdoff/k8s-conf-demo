@@ -9,7 +9,7 @@ env:
 jobs:
   build:
     name: test-release
-    runs-on: self_hosted
+    runs-on: self-hosted
     steps:
       - name: get pod
         run: kubectl apply -f manifests/
