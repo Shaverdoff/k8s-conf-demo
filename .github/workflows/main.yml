@@ -19,5 +19,6 @@ jobs:
         run: git clone https://github.com/Shaverdoff/k8s-conf-demo.git
       - name: get pod
         run: kubectl get pod -A
-      - name: apply
-        run: kubectl apply -f deployment.yaml
+      - name: where were are
+        run: pwd && ls -lsa 
+        #kubectl apply -f deployment.yaml
