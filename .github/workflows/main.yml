@@ -21,4 +21,5 @@ jobs:
         run: kubectl get pod -A
       - name: where were are
         run: pwd && ls -lsa 
-        #kubectl apply -f deployment.yaml
+      - name: deply 
+        run: kubectl apply -f k8s-conf-demo/manifests/deployment.yaml
