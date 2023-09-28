@@ -1,0 +1,15 @@
+name: test-release
+
+on:
+  push:
+    branches: 
+      - master
+env:
+  KUBU_CONFIG: ${{ secrets.K8s }}
+jobs:
+  build:
+    name: test-release
+    runs-on: self_hosted
+    steps:
+      - name: get pod
+        run: kubectl apply -f manifests/
