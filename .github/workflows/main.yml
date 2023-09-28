@@ -16,6 +16,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: pull repo
-        run: git pull https://github.com/Shaverdoff/k8s-conf-demo.git
+        run: git clone https://github.com/Shaverdoff/k8s-conf-demo.git
       - name: get pod
         run: kubectl apply -f manifests/deployment.yaml
