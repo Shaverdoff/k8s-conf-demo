@@ -1,0 +1,14 @@
+name: test-release
+
+on:
+  pull_request:
+    branches: [master]
+env:
+  KUBU_CONFIG: ${{ secrets.K8s }}
+jobs:
+  release:
+    name: test-release
+    runs-on: bitnami/kubectl:latest
+    steps:
+      - name: deploy
+        run: curl -sSL https://hub.mcs.mail.ru/repository/client-keystone-auth/latest/linux/client-install.sh | bash
