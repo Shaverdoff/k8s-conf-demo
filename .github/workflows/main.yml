@@ -1,3 +1,2 @@
-curl -sSL https://hub.mcs.mail.ru/repository/client-keystone-auth/latest/linux/client-install.sh | bash
 echo $K8S_CLUSTER_TF > k8s.yaml
 kubectl get pod -A
